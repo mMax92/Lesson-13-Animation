@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.scene {
+    width: auto;
+    height: 915px;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.block-mountain {
+    display: block;
+    position: relative;
+    top: 660px;
+    left: 300px;
+}
+
+.mountain {
+    width: 500px;
+    height: 500px;
+    background-color:  #4381b6;
+    transform: rotate(45deg);
+    position: absolute;
+    float: left;
+}
+
+.mountain.second {
+    top: 90px;
+    left: 320px;
+}
+
+.mountain.third {
+    left: 550px;
+}
+
+.clearfix {
+    clear: both;
+}
