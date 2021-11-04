@@ -14,7 +14,7 @@ body {
 
 .block-mountain {
     position: relative;
-    top: 660px;
+    top: 665px;
     left: 300px;
     z-index: 3;
 }
@@ -151,7 +151,7 @@ body {
     border-radius: 50%;
     z-index: 1;
     position: absolute;
-    top: 560px;
+    top: 570px;
     left: 870px;
     animation: movingSun 10s ease-in-out infinite alternate;
 }
@@ -167,7 +167,7 @@ body {
         background-color: #dba600;
     }
     100% {
-        transform: translateY(-750px);
+        transform: translateY(-760px);
         background-color: #f7cc00;
     }
 }
