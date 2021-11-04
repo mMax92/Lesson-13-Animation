@@ -14,10 +14,10 @@ body {
 }
 
 .block-mountain {
-    display: block;
     position: relative;
     top: 660px;
     left: 300px;
+    z-index: 3;
 }
 
 .mountain {
@@ -40,4 +40,135 @@ body {
 
 .clearfix {
     clear: both;
+}
+
+.block-cloud {
+    position: relative;
+    top: 500px;
+}
+
+.cloud {
+    position: relative;
+    z-index: 2;
+}
+
+.oval {
+    width: 250px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #dcdcdc;
+    float: left;
+    position: absolute;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    float: left;
+    position: absolute;
+}
+
+.circle.small {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 110px;
+}
+
+.circle.big {
+    top: -70px;
+    left: 30px;
+}
+
+@keyframes movingBigCloud {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+.cloud.big-fast {
+    animation: movingBigCloud 8s ease-out infinite alternate-reverse;
+}
+
+.cloud.big-slow {
+    animation: movingBigCloud 10s linear infinite alternate-reverse;
+}
+
+@keyframes movingSmallFastCloud {
+    0% {
+        transform: scale(0.7) translateY(10px) translateX(-40%);
+        opacity: 0%;
+    }
+    10% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        transform: scale(0.7) translateY(10px) translateX(130%);
+        opacity: 0%;
+    }
+}
+
+.cloud.small.fast {
+    animation: movingSmallFastCloud 4s ease-out infinite alternate-reverse both;
+}
+
+@keyframes movingSmallSlowCloud {
+    0% {
+        transform: scale(0.7) translateX(-40%);
+        opacity: 0%;
+    }
+    10% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        transform: scale(0.7) translateX(130%);
+        opacity: 0%;
+    }
+}
+
+.cloud.small.slow {
+    animation: movingSmallSlowCloud 8s linear infinite alternate both;
+}
+
+.sun {
+    width: 180px;
+    height: 180px;
+    background-color: #f2812f;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    left: 870px;
+    animation: movingSun 10s ease-in-out infinite alternate;
+}
+
+@keyframes movingSun {
+    0% {
+        opacity: 0%;
+    }
+    5% {
+        opacity: 100%;
+    }
+    15% {
+        background-color: #dba600;
+    }
+    100% {
+        transform: translateY(-750px);
+        background-color: #f7cc00;
+    }
 }
